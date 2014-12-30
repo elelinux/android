@@ -12,6 +12,12 @@
   <remote  name="private"
            fetch="ssh://git@github.com" />
 
+  <remote  name="elelinux"
+           fetch=".." />
+
+  <remote  name="private"
+           fetch="ssh://git@github.com" />
+
   <default revision="refs/heads/cm-12.0"
            remote="github"
            sync-c="true"
@@ -21,7 +27,7 @@
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
-  <project path="android" name="CyanogenMod/android" />
+  <project path="android" name="elelinux/android" remote="elelinux" revision="cm-12.0" />
 
   <project path="abi/cpp" name="CyanogenMod/android_abi_cpp" groups="pdk" />
   <project path="art" name="CyanogenMod/android_art" groups="pdk" />
